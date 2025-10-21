@@ -11,6 +11,6 @@ services:
       - key: PYTHON_VERSION
         value: 3.11.9
       - key: BOT_TOKEN
-        sync: false
+        value: "7641295284:AAF10sqQSJZgghhEJBuPgi3EcKHvb1ipegE"
       - key: CHANNEL_ID
         value: "@da_tak_realno"
