@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  telegram-bot:
+    build: .
+    container_name: da_tak_realno_bot
+    restart: unless-stopped
+    environment:
+      - BOT_TOKEN=${BOT_TOKEN:-7641295284:AAF10sqQSJZgghhEJBuPgi3EcKHvb1ipegE}
+      - CHANNEL_ID=${CHANNEL_ID:-@da_tak_realno}
+    volumes:
+      - ./logs:/app/logs
+    networks:
+      - bot-network
+
+networks:
+  bot-network:
+    driver: bridge 

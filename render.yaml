@@ -1,0 +1,16 @@
+services:
+  - type: worker
+    name: da-tak-mozhno-bot
+    env: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: python bot.py
+    autoDeploy: true
+    region: frankfurt
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.9
+      - key: BOT_TOKEN
+        sync: false
+      - key: CHANNEL_ID
+        value: "@da_tak_realno"
